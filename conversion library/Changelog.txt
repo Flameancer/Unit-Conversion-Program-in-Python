@@ -1,0 +1,18 @@
+Unitcon.py Change log
+
+
+Alpha v1.0.0.0: 8/5
+#Started making the program
+
+Alpha v1.0.2.0: 8/7
+#Changed layout of the program
+#Did experimentation with a switch button, failed
+
+Alpha v1.0.3.0: 8/8
+#Added a temporary icon image
+#Did some work around the code so all menus are in one class
+#Added a redraw command and clear screen command
+
+Alpha v1.0.3.1: 8/8
+#Decided to switch between buttons and instead use check buttons
+#Changed the module api a little
