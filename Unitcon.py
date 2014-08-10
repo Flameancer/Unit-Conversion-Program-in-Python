@@ -17,13 +17,14 @@ class Menus:
         self.root = root
         self.mainM()
         if os.name == 'nt':
-            self.root.iconbitmap("image.ico")
+            self.root.iconbitmap("icons\image.ico")
         elif os.name == 'posix':
             if platform.system() == 'Linux':
-                img = PhotoImage(file = "image.png")
+                img = PhotoImage(file = "icons\image.png")
                 self.root.call('wm', 'iconphoto', self.root._w, img)
-            elif platform.system() == 'Darwin'
-                img = PhotoImage(file = "image.png")
+            elif platform.system() == 'Darwin':
+                img = PhotoImage(file = "icons\image.icns")
+                self.root.call('wm', 'iconphoto', self.root._w, imgs)
 
 
 #This is the Main Menu
