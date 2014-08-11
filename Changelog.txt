@@ -23,3 +23,4 @@ Alpha v1.0.3.2: 8/10
 #Fixed a problem in where the program icon would not load in linux
 #Looked into testing OSx icon imaging. Will confirm works once valid test option
     becomes available
+#Moved each image into their own folder.

@@ -99,7 +99,7 @@ class Menus:
         #Create entry space to recieve text
 
 
-
+        #This is where the problem starts.
         self.entry = Entry(self.frame2, width = 7,
          textvariable = self.entryspace)
         self.entry.grid(column = 3, row = 3)
