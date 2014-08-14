@@ -205,7 +205,7 @@ class Calculate(object):
 
 
 if __name__ == "__main__":
-    print ("This is the unit conversion program Alpha v1.0.3.2")
+    print ("This is the unit conversion program Alpha v1.1.0.1")
     print ("This program requires that the alpha.py file be in the same " +
     "directory or in the main python library.")
     root = Tk()
