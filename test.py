@@ -1,9 +1,20 @@
-#Test program to test conversion Library
+#Test program to solve problems.
 
-import Tkinter as tk
+class Foo(object):
+    def __init__(self, number):
+        self.number = number
 
-root = Tk()
-window = Frame(root)
-window.grid(column = 0, row = 0)
+    def run(self):
+        print "I will now square your number"
+        print "Your number squared is: "
 
-question = IntVar()
+#This squares the number
+        def calculate():
+            return self.number**2
+
+        return calculate()
+
+
+if __name__ == "__main__":
+    test = Foo(input("Choose a number: "))
+    print test.run()

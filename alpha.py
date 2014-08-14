@@ -14,35 +14,35 @@ class Temperature:
     def C2F(self,Celsius):
         self.Celsius = Celsius
         self.Fahrenheit = (self.Celsius*9)/5 + 32
-        return self.Fahrenheit
+        return round(self.Fahrenheit, 3)
 
     """The Conversion from Fahrenheit to Celsius"""
     def F2C(self, Fahrenheit):
         self.Fahrenheit = Fahrenheit
         self.Celsius = ((self.Fahrenheit-32)*5)/9
-        return self.Celsius
+        return round(self.Celsius, 3)
 
     """The Conversion from Kelvin to Celsius"""
     def K2C(self, Kelvin):
         self.Kelvin = Kelvin
         self.Celsius = self.Kelvin - 273.15
-        return self.Celsius
+        return round(self.Celsius, 3)
 
     """The Conversion from Celsius to Kelvin"""
     def C2K(self, Celsius):
         self.Celsius = Celsius
         self.Kelvin = self.Celsius + 273.15
-        return self.Kelvin
+        return round(self.Kelvin, 3)
 
     """The Conversion from Kelvin to Fahrenheit"""
     def K2F(self, Kelvin):
         self.Kelvin = Kelvin
-        self.Fahrenheit = 1.8*(Self.Kelvin)+32
-        return self.Fahrenheit
+        self.Fahrenheit = 1.8*(self.Kelvin-273)+32
+        return round(self.Fahrenheit, 3)
 
     """The Conversion from Fahrenheit to Kelvin"""
     def F2K(self, Fahrenheit):
         self.Fahrenheit = Fahrenheit
         self.Celsius = ((self.Fahrenheit-32)*5)/9
         self.Kelvin = self.Celsius + 273.15
-        return self.Kelvin
+        return round(self.Kelvin, 3)

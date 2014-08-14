@@ -81,37 +81,92 @@ class Menus:
 
         self.back = Button(self.frame2, text = "< Back",
          command = lambda: self.redo(self.frame2))
-        self.back.grid(column = 1, row = 3)
+        self.back.grid(column = 1, row = 4)
 
         self.label = Label(self.frame2, text = "Convert from: ")
         self.label.grid(column = 1, row = 1, padx = 4)
+
+        self.label2 = Label(self.frame2, text = "Convert to: ")
+        self.label2.grid(column = 1, row = 2, padx = 4)
 
         #Create the check boxes
 
         self.celsius = Checkbutton(self.frame2, text = "Celsius",
          variable = self.firstunit, onvalue = 'celsius')
-        self.celsius.grid(column = 2, row = 1)
+        self.celsius.grid(column = 2, row = 1, padx = 3)
 
         self.fahrenheit = Checkbutton(self.frame2, text = "Fahrenheit",
+         variable = self.firstunit, onvalue = 'fahrenheit')
+        self.fahrenheit.grid(column = 3, row = 1, padx = 3)
+
+        self.kelvin = Checkbutton(self.frame2, text = 'Kelvin',
+         variable = self.firstunit, onvalue = 'kelvin')
+        self.kelvin.grid(column = 4, row = 1, padx = 3)
+
+        self.celsius2 = Checkbutton(self.frame2, text = "Celsius",
+         variable = self.secondunit, onvalue = 'celsius')
+        self.celsius2.grid(column = 2, row = 2, padx = 3)
+
+        self.fahrenheit2 = Checkbutton(self.frame2, text = "Fahrenheit",
          variable = self.secondunit, onvalue = 'fahrenheit')
-        self.fahrenheit.grid(column = 3, row = 2)
+        self.fahrenheit2.grid(column = 3, row = 2, padx = 3)
+
+        self.kelvin2 = Checkbutton(self.frame2, text = 'Kelvin',
+         variable = self.secondunit, onvalue = 'kelvin')
+        self.kelvin2.grid(column = 4, row = 2, padx = 3)
 
         #Create entry space to recieve text
 
-
-        #This is where the problem starts.
-        self.entry = Entry(self.frame2, width = 7,
+        self.entry = Entry(self.frame2, width = 10,
          textvariable = self.entryspace)
-        self.entry.grid(column = 3, row = 3)
-
-        self.compute = Calculate(self.entryspace.get())
+        self.entry.grid(column = 4, row = 3)
 
         self.button = Button(self.frame2, text = "Calculate",
-         command = lambda: self.displayspace.set(self.compute.celtoFah()))
-        self.button.grid(column = 3, row = 4)
+         command = lambda: compute())
+        self.button.grid(column = 4, row = 4)
 
         self.display = Label(self.frame2, textvariable = self.displayspace)
-        self.display.grid(column = 2, row = 2)
+        self.display.grid(column = 3, row = 3)
+
+        self.answer = Label(self.frame2, text = "Answer :")
+        self.answer.grid(column = 2, row  = 3)
+
+        self.root.bind('<Return>', lambda e: compute())
+
+        def compute():
+            try:
+                self.num = self.entryspace.get()
+                self.num = round(float(self.num), 3)
+                self.calculate = Temperature()
+
+                if self.firstunit.get() == 'celsius' and \
+                 self.secondunit.get() == 'fahrenheit':
+                    self.displayspace.set(self.calculate.C2F(self.num))
+
+                elif self.firstunit.get() =='celsius' and \
+                 self.secondunit.get() == 'kelvin':
+                     self.displayspace.set(self.calculate.C2K(self.num))
+
+                elif self.firstunit.get() =='fahrenheit' and \
+                 self.secondunit.get() == 'celsius':
+                     self.displayspace.set(self.calculate.F2C(self.num))
+
+                elif self.firstunit.get() =='fahrenheit' and \
+                 self.secondunit.get() == 'kelvin':
+                     self.displayspace.set(self.calculate.F2K(self.num))
+
+                elif self.firstunit.get() =='kelvin' and \
+                 self.secondunit.get() == 'celsius':
+                     self.displayspace.set(self.calculate.K2C(self.num))
+
+                elif self.firstunit.get() =='kelvin' and \
+                 self.secondunit.get() == 'fahrenheit':
+                     self.displayspace.set(self.calculate.K2F(self.num))
+
+            except ValueError:
+                pass
+        return compute()
+
 
 
     def clearscreen(self, window):
@@ -125,19 +180,19 @@ class Menus:
 
 
 
+#This right now is unusable. :(
 
-
- #This class creates the calulation commands for each Unit
+''''#This class creates the calulation commands for each Unit
  #This is what I'm trying to run
-class Calculate:
+class Calculate(object):
+    def __init__(self):
+        self.gui = Menus(root)
 
-    def __init__(self, number):
-        self.number = number
-
-    def celtoFah(self):
+    def celtoFah(self, *args):
+        self.temp = Temperature()
+        self.number = float(self.gui.temperM)
+        print self.number
         try:
-            self.temp = Temperature()
-            self.number = float(self.number)
             return self.temp.C2F(self.number)
         except ValueError:
             pass
@@ -145,7 +200,7 @@ class Calculate:
 
     def Fahtocel(self):
         self.temp = Temperature
-        return self.temp.F2C(self.number)
+        return self.temp.F2C(self.number)'''
 
 
 

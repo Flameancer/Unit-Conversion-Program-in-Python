@@ -25,4 +25,12 @@ Alpha v1.0.3.2: 8/10
     becomes available
 #Moved each image into their own folder.
 
-Alpha v1.0.4.0: 8/11
+Alpha v1.0.4.0: 8/13
+#Had to scrub the calculate class due to ongoing complications :(
+
+Alpha v1.1.0.1: 8/14
+#Got the button command to work finally!
+#Version is finally 1.1 and some change
+#Discoverd bug in api
+#Changed api so it rounds to three decimal places
+#Temperature is now fully operational
