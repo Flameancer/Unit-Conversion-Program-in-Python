@@ -4,7 +4,7 @@
 
 import os
 import platform
-from alpha import Temperature
+from conversions import Temperature
 from Tkinter import *
 from ttk import *
 
@@ -206,7 +206,7 @@ class Calculate(object):
 
 if __name__ == "__main__":
     print ("This is the unit conversion program Alpha v1.1.0.1")
-    print ("This program requires that the alpha.py file be in the same " +
+    print ("This program requires that the conversions.py file be in the same " +
     "directory or in the main python library.")
     root = Tk()
     Home = Menus(root)
