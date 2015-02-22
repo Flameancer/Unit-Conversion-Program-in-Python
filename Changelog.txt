@@ -34,3 +34,10 @@ Alpha v1.1.0.1: 8/14
 #Discoverd bug in api
 #Changed api so it rounds to three decimal places
 #Temperature is now fully operational
+
+Alpha v1.2: 2/22
+#Started working on the Length conversions
+#Removed the math folder since it wasn't working properly
+#Put 'Conversions' back into the main directory
+#Started working on the 'Length' class in the API
+#Added 'Data' to the list of things to convert. I.E kilobytes, Megabytes, etc.

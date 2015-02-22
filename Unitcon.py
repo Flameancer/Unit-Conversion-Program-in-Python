@@ -4,7 +4,7 @@
 
 import os
 import platform
-from conversions import Temperature
+from conversions import Temperature, Length
 from Tkinter import *
 from ttk import *
 
@@ -34,7 +34,7 @@ class Menus:
         self.root.title("Unit Converter")
 
         self.butlabs = ['Temperature', 'Length', 'volume', 'Pressure',
-                        'Speed', 'Energy', 'N/A', 'N/A']
+                        'Speed', 'Energy', 'Data', 'N/A']
 
         self.varCol = 0
         self.newrow = False
@@ -45,9 +45,18 @@ class Menus:
             if word == 'Temperature':
                 self.options = Button(self.frame, text = word,
                  command  = self.temperM)
+            elif word == 'Length':
+                self.options = Button(self.frame, text = word,
+                 command = self.lengthM)
             else:
                 self.options = Button(self.frame, text = word, command = None)
-            if word == 'Temperature':
+
+            '''These commands disabled or enable a button. As of right now
+            the buttons Temperature and Length are the only ones that are
+            enabled. More will be enabled as they are being worked on'''
+
+
+            if word == 'Temperature' or word == 'Length':
                 self.options.state(["!disabled"])
             else:
                 self.options.state(["disabled"])
@@ -77,11 +86,10 @@ class Menus:
 
         #Create back button
 
-        #This is the part that needs to be fixed
-
         self.back = Button(self.frame2, text = "< Back",
          command = lambda: self.redo(self.frame2))
         self.back.grid(column = 1, row = 4)
+
 
         self.label = Label(self.frame2, text = "Convert from: ")
         self.label.grid(column = 1, row = 1, padx = 4)
@@ -167,7 +175,14 @@ class Menus:
                 pass
         return compute()
 
+    def lengthM(self, *args):
+        self.clearscreen(self.frame)
+        self.frame3 = Frame(self.root)
+        self.frame3.grid(column = 0, row = 0)
 
+        self.back = Button(self.frame3, text = "< Back",
+         command = lambda: self.redo(self.frame3))
+        self.back.grid(column = 1, row = 4)
 
     def clearscreen(self, window):
         self.window = window
@@ -201,6 +216,8 @@ class Calculate(object):
     def Fahtocel(self):
         self.temp = Temperature
         return self.temp.F2C(self.number)'''
+
+        #As of 2/22/15, this class is still unusable
 
 
 
