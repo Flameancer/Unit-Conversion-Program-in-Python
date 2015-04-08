@@ -20,7 +20,7 @@ class Menus:
             self.root.iconbitmap("icons\image.ico")
         elif os.name == 'posix':
             if platform.system() == 'Linux':
-                img = PhotoImage(file = "icons\image.png")
+                img = PhotoImage(file = "image.gif")
                 self.root.call('wm', 'iconphoto', self.root._w, img)
             elif platform.system() == 'Darwin':
                 img = PhotoImage(file = "icons\image.icns")

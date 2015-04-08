@@ -41,3 +41,9 @@ Alpha v1.2: 2/22
 #Put 'Conversions' back into the main directory
 #Started working on the 'Length' class in the API
 #Added 'Data' to the list of things to convert. I.E kilobytes, Megabytes, etc.
+
+Alpha v1.2: 4/8
+#Icon no longer works on Elementary OS. Need to test availability on other distros
+  like Ubuntu or Fedora.
+
+  
