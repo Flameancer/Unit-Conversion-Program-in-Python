@@ -20,11 +20,14 @@ class Menus:
             self.root.iconbitmap("icons\image.ico")
         elif os.name == 'posix':
             if platform.system() == 'Linux':
-                img = PhotoImage(file = "icons\image.png")
-                self.root.call('wm', 'iconphoto', self.root._w, img)
+                #This does not work in gnome desktop environments.
+                #Removed from code until can test if it works in other environments
+                '''img = PhotoImage(file = "icons\image.png")
+                self.root.call('wm', 'iconphoto', self.root._w, img)'''
             elif platform.system() == 'Darwin':
-                img = PhotoImage(file = "icons\image.icns")
-                self.root.call('wm', 'iconphoto', self.root._w, imgs)
+                #Will Need to confirm later if works in OSX Maverick or better
+                '''img = PhotoImage(file = "icons\image.icns")
+                self.root.call('wm', 'iconphoto', self.root._w, imgs)'''
 
 
 #This is the Main Menu
@@ -222,9 +225,12 @@ class Calculate(object):
 
 
 if __name__ == "__main__":
-    print ("This is the unit conversion program Alpha v1.1.0.1")
+    print ("This is the unit conversion program Alpha v1.2.0.1")
     print ("This program requires that the conversions.py file be in the same " +
     "directory or in the main python library.")
+    print ("As of right now the only calculations that work is Temperature")
+    print ("Mostly because I am lazy and also as a student I have no time to "+
+    "work on this at the moment. Hopefully things will change during the summer.")
     root = Tk()
     Home = Menus(root)
     root.mainloop()

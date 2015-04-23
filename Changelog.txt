@@ -41,3 +41,7 @@ Alpha v1.2: 2/22
 #Put 'Conversions' back into the main directory
 #Started working on the 'Length' class in the API
 #Added 'Data' to the list of things to convert. I.E kilobytes, Megabytes, etc.
+
+Alpha v1.2.0.1: 4/22
+#Removed making icons for Linux and OSX Operating systems until further notice
+#Added the correct version name in the main file and the Markdown
