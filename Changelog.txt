@@ -42,6 +42,10 @@ Alpha v1.2: 2/22
 #Started working on the 'Length' class in the API
 #Added 'Data' to the list of things to convert. I.E kilobytes, Megabytes, etc.
 
-Alpha v1.2.0.1: 4/22
+Alpha v1.2.0.1: 4/8
+#Icon no longer works on Elementary OS. Need to test availability on other distros
+  like Ubuntu or Fedora.
+
+Alpha v1.2.0.2: 4/22
 #Removed making icons for Linux and OSX Operating systems until further notice
 #Added the correct version name in the main file and the Markdown
