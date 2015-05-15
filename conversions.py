@@ -51,7 +51,7 @@ class Length:
     """The Conversion from feet to meters"""
     def F2M(self, Feet):
         self.Feet = Feet
-        self.Meters = (self.feet * 0.304)
+        self.Meters = (self.Feet * 0.304)
         return round(self.Meters, 4)
 
     """The Conversion from meters to feet"""
