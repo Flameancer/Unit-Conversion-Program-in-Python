@@ -135,7 +135,7 @@ class Menus:
         self.button = Button(self.frame2, text = "Calculate",
          command = lambda: compute())
         self.button.grid(column = 4, row = 4)
-
+        
         self.display = Label(self.frame2, textvariable = self.displayspace)
         self.display.grid(column = 3, row = 3)
 
