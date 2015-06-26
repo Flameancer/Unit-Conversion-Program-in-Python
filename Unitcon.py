@@ -135,7 +135,7 @@ class Menus:
         self.button = Button(self.frame2, text = "Calculate",
          command = lambda: compute())
         self.button.grid(column = 4, row = 4)
-        
+
         self.display = Label(self.frame2, textvariable = self.displayspace)
         self.display.grid(column = 3, row = 3)
 
@@ -156,23 +156,23 @@ class Menus:
 
                 elif self.firstunit.get() =='celsius' and \
                  self.secondunit.get() == 'kelvin':
-                     self.displayspace.set(self.calculate.C2K(self.num))
+                    self.displayspace.set(self.calculate.C2K(self.num))
 
                 elif self.firstunit.get() =='fahrenheit' and \
                  self.secondunit.get() == 'celsius':
-                     self.displayspace.set(self.calculate.F2C(self.num))
+                    self.displayspace.set(self.calculate.F2C(self.num))
 
                 elif self.firstunit.get() =='fahrenheit' and \
                  self.secondunit.get() == 'kelvin':
-                     self.displayspace.set(self.calculate.F2K(self.num))
+                    self.displayspace.set(self.calculate.F2K(self.num))
 
                 elif self.firstunit.get() =='kelvin' and \
                  self.secondunit.get() == 'celsius':
-                     self.displayspace.set(self.calculate.K2C(self.num))
+                    self.displayspace.set(self.calculate.K2C(self.num))
 
                 elif self.firstunit.get() =='kelvin' and \
                  self.secondunit.get() == 'fahrenheit':
-                     self.displayspace.set(self.calculate.K2F(self.num))
+                    self.displayspace.set(self.calculate.K2F(self.num))
 
             except ValueError:
                 pass
